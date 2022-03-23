@@ -1,5 +1,7 @@
 package HM_5;
 
+import HM_7.Test;
+
 import java.util.concurrent.Semaphore;
 
 public class Tunnel extends Stage {
@@ -10,6 +12,7 @@ public class Tunnel extends Stage {
         this.semaphore = new Semaphore(width);
     }
     @Override
+    @Test (priority = 2)
     public void go(Car c) {
         try {
             try {
