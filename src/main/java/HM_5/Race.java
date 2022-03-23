@@ -1,5 +1,8 @@
 package HM_5;
 
+import HM_7.BeforeSuite;
+import HM_7.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,7 +23,7 @@ public class Race extends Thread {
     }
 
 
-
+    @Test(priority = 1)
     public synchronized void finish(Car car) {
 
         if (finishCount++ == 0) {
@@ -30,6 +33,7 @@ public class Race extends Thread {
         }
 
     }
+    @BeforeSuite
     public void raceCars () {
         Car[] cars = new Car[CARS_COUNT];
         for (int i = 0; i < cars.length; i++) {
